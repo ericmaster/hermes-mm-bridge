@@ -1,0 +1,17 @@
+services:
+  hermes-mm-bridge:
+    build: .
+    container_name: hermes-mm-bridge
+    ports:
+      - "3088:3088"
+    volumes:
+      - ./logs:/app/logs
+    env_file:
+      - .env
+    environment:
+      # Infisical credentials
+      - INFISICAL_CLIENT_ID=${INFISICAL_CLIENT_ID:-}
+      - INFISICAL_CLIENT_SECRET=${INFISICAL_CLIENT_SECRET:-}
+      - INFISICAL_HOST_URL=${INFISICAL_HOST_URL:-http://localhost:8080}
+      - LOG_DIR=/app/logs
+    restart: unless-stopped

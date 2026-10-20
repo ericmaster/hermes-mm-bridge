@@ -3,8 +3,14 @@
 > [!IMPORTANT]
 > **AGENT.MD CRITICAL RULES:**
 > **No Fluff:** Minimum characters. Concise but 100% complete.
-> **No History:** No changelogs. Reflect ONLY the current "Source of Truth".
+> **Current State Only:** Keep this file current. Do not use AGENTS.md, specs, or other
+> non-ADR docs as changelogs, timelines, release notes, or historical change logs. Only
+> `docs/adr/` retains historical decision rationale or superseded choices.
+> **ADR Lifecycle:** Before release, ADRs may be squashed to retain the latest decision; after
+> release, preserve published ADRs and use a new superseding ADR.
 > **Live Sync:** Always keep AGENTS.md file updated with the latest relevant code changes after code is updated.
+> **Context Hygiene:** Apply the `context-hygiene` skill before writing or revising any
+> documentation or spec; keep each fact in its SSOT and link instead of repeating it.
 
 > [!WARNING]
 > **Avoid Redundant Documentation**
